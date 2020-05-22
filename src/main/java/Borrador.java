@@ -7,6 +7,7 @@ public class Borrador {
 	Material material;
 	String nombre;
 	Trama trama = Trama.lisa;
+	Integer temperaturaAdecuada;
 	
 	public Borrador(TipoDePrenda _tipo)
 	{
@@ -27,7 +28,12 @@ public class Borrador {
 	    material = _material;
 	 }
     
+	 public void  especificarTemperaturaAdecuada(Integer _temperatura)
+	 {		
+		temperaturaAdecuada = _temperatura;
+	 }
+	 
  	 public Prenda crearPrenda() {
- 		 return new Prenda(tipo, colorPrincipal, material,  colorSecundario, trama);
+ 		 return new Prenda(tipo, colorPrincipal, material,  colorSecundario, trama,temperaturaAdecuada);
  	 }
 }

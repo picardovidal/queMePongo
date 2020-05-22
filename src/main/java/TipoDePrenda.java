@@ -29,6 +29,11 @@ public enum TipoDePrenda {
 		public Categoria getCategoria(){
 			return Categoria.parteInferior;
 		}
+	},
+	gorro{
+		public Categoria getCategoria(){
+			return Categoria.accesorios;
+		}
 	};
 	
 	
