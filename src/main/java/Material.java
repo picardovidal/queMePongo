@@ -1,4 +1,5 @@
 
-public class Material {
-
+public enum Material {
+	Pique,
+	Acetato;
 }

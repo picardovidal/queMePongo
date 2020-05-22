@@ -5,6 +5,16 @@ public enum TipoDePrenda {
 			return Categoria.calzado;
 		}
 	},
+	zapatilla{
+		public Categoria getCategoria(){
+			return Categoria.calzado;
+		}
+	},
+	chomba{
+		public Categoria getCategoria(){
+			return Categoria.parteSuperior;
+		}
+	},
 	camisa{
 		public Categoria getCategoria(){
 			return Categoria.parteSuperior;
@@ -14,7 +24,13 @@ public enum TipoDePrenda {
 		public Categoria getCategoria(){
 			return Categoria.parteInferior;
 		}
+	},
+	pantalonDeVestir{
+		public Categoria getCategoria(){
+			return Categoria.parteInferior;
+		}
 	};
+	
 	
 	public abstract Categoria getCategoria();
 }
