@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +22,7 @@ public class BufferAccuWeather {
    }
 
 
-   public List<Map<String, Object>> getWeather(String ciudad) {
+   public List<Map<String, Object>> getWeather(String ciudad,Date fecha) {
 	  //busco en el buffer si  ya tengo un clima cargado para esta ciudad y hora, si esta lo devuelvo, 
 	   //sino consulto a la api de accuWeather lo ingreso al buffer y luego devuelvo.
 	   List<Map<String, Object>> clima = null;

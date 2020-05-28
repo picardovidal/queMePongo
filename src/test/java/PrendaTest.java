@@ -1,5 +1,5 @@
 import static org.junit.Assert.assertNotNull;
-
+import java.util.Date;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -12,6 +12,7 @@ public class PrendaTest {
     @Before
     public void init() {
 	    borrador = new Borrador(TipoDePrenda.zapato);
+	    
     }
 	
     @Test(expected = PrendaInvalidaException.class)
@@ -35,5 +36,12 @@ public class PrendaTest {
 		borrador.especificarColorPrincipal(new Color("Blanco"));
 		borrador.especificarMaterial(Material.Pique);
 		assertNotNull(borrador.crearPrenda());
+	}
+	
+	@Test
+	public void ObtenerClima()
+	{
+		ServicioDeClima servioClima = new ServicioAccueWeatherMock(); 
+		assertNotNull(servioClima.ObtnerClima("Rand MacNally", new Date()));
 	}
 }
